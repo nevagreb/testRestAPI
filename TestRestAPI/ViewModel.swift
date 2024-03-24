@@ -9,8 +9,6 @@ import Foundation
 
 class MyList: ObservableObject {
     @Published var data: [Person]
-//    let url = "https://reqres.in/api/users"
-//    let url1 = "https://reqres.in/api/users?page=2"
     let myUrl = "http://localhost:3000/url"
     
     init() {
