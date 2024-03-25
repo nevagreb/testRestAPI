@@ -16,16 +16,7 @@ struct PersonRaw: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: url, content: { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 50, height: 50)
-                    .clipShape(Circle())
-            },
-                placeholder: {
-                    ProgressView()
-            })
+           photo
             
             VStack(alignment: .leading) {
                 Text(person.first_name + " " + person.last_name)
@@ -36,6 +27,29 @@ struct PersonRaw: View {
             }
             
             Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    var photo: some View {
+        if person.avatar.isEmpty {
+            Image("sample")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 50, height: 50)
+                .clipShape(Circle())
+                .background(Circle().fill(.gray).frame(width: 51, height: 51))
+        } else {
+            AsyncImage(url: url, content: { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+            },
+                placeholder: {
+                    ProgressView()
+            })
         }
     }
 }

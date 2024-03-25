@@ -9,24 +9,52 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var people = MyList()
+    @State private var isShowingSheet = false
+    @State private var newPerson = Person()
     
     var body: some View {
         NavigationStack {
-            List(people.data, id: \.self) {person in
+            List{
+                ForEach(people.data, id: \.self) { person in
                     PersonRaw(person: person)
+                }
+                .onDelete(perform: delele)
             }
             .listStyle(.grouped)
-            
-            Button("Load Data") {
-                Task {
-                    try await people.loadData()
+            .navigationTitle("My contacts")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isShowingSheet.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
             }
-            .navigationTitle("My contacts")
+        }
+        .environmentObject(people)
+        .onAppear {
+            Task {
+                try await people.loadData()
+            }
+        }
+        .sheet(isPresented: $isShowingSheet) {
+            NewContactView()
+                .environmentObject(people)
+        }
+    }
+    
+    func delele(at indexSet: IndexSet) {
+        for i in indexSet.makeIterator() {
+            let item = people.data[i]
+            Task {
+                try await people.delete(id: item.id)
+            }
         }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(MyList())
 }
