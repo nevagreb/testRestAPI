@@ -17,23 +17,18 @@ struct Person: Codable, Hashable {
     static var example = Person(email: "michael.lawson@reqres.in",first_name: "Michael", last_name: "Lawson", avatar: "https://reqres.in/img/faces/7-image.jpg")
     
     init() {
+        id = nil
         email = ""
         first_name = ""
         last_name = ""
         self.avatar = nil
     }
     
-    init(email: String, first_name: String, last_name: String, avatar: String? = nil) {
+    init(id: Int? = nil, email: String, first_name: String, last_name: String, avatar: String? = nil) {
+        self.id = id
         self.email = email
         self.first_name = first_name
         self.last_name = last_name
         self.avatar = avatar
-    }
-    
-    mutating func clearData() {
-        self.email = ""
-        self.first_name = ""
-        self.last_name = ""
-        self.avatar = nil
     }
 }

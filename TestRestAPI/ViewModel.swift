@@ -12,7 +12,6 @@ let myUrl = "http://localhost:3000/url"
 
 class MyList: ObservableObject {
     @Published var data: [Person]
-    @Published var newPerson: Person
     
     var url: URL? {
         URL(string: myUrl)
@@ -20,7 +19,6 @@ class MyList: ObservableObject {
     
     init() {
         data = []
-        newPerson = Person()
     }
     
     @MainActor

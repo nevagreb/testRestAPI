@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63251F562BB47F9600E2791C /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251F552BB47F9600E2791C /* PhotoPicker.swift */; };
 		63FE59342BB077DF0050D906 /* TestRestAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59332BB077DF0050D906 /* TestRestAPIApp.swift */; };
 		63FE59362BB077DF0050D906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59352BB077DF0050D906 /* ContentView.swift */; };
 		63FE59382BB077E00050D906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FE59372BB077E00050D906 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63251F552BB47F9600E2791C /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		63FE59302BB077DF0050D906 /* TestRestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FE59332BB077DF0050D906 /* TestRestAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRestAPIApp.swift; sourceTree = "<group>"; };
 		63FE59352BB077DF0050D906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		63FE59272BB077DF0050D906 = {
 			isa = PBXGroup;
 			children = (
+				63251F552BB47F9600E2791C /* PhotoPicker.swift */,
 				63FE59322BB077DF0050D906 /* TestRestAPI */,
 				63FE59442BB077E00050D906 /* TestRestAPITests */,
 				63FE594E2BB077E00050D906 /* TestRestAPIUITests */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63251F562BB47F9600E2791C /* PhotoPicker.swift in Sources */,
 				63FE595F2BB077F50050D906 /* Model.swift in Sources */,
 				63FE59362BB077DF0050D906 /* ContentView.swift in Sources */,
 				63FE59652BB0ED390050D906 /* ContactView.swift in Sources */,
