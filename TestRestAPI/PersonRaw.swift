@@ -10,10 +10,6 @@ import SwiftUI
 struct PersonRaw: View {
     @State var person: Person
     
-    var url: URL? {
-        URL(string: person.avatar)
-    }
-    
     var body: some View {
         HStack {
            photo
@@ -32,15 +28,8 @@ struct PersonRaw: View {
     
     @ViewBuilder
     var photo: some View {
-        if person.avatar.isEmpty {
-            Image("sample")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 50, height: 50)
-                .clipShape(Circle())
-                .background(Circle().fill(.gray).frame(width: 51, height: 51))
-        } else {
-            AsyncImage(url: url, content: { image in
+        if let avatar = person.avatar {
+            AsyncImage(url: URL(string: avatar), content: { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -50,6 +39,13 @@ struct PersonRaw: View {
                 placeholder: {
                     ProgressView()
             })
+        } else {
+            Image("sample")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 50, height: 50)
+                .clipShape(Circle())
+                .background(Circle().fill(.gray).frame(width: 51, height: 51))
         }
     }
 }

@@ -17,7 +17,7 @@
 		63FE595F2BB077F50050D906 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE595E2BB077F50050D906 /* Model.swift */; };
 		63FE59612BB079730050D906 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59602BB079730050D906 /* ViewModel.swift */; };
 		63FE59632BB07BAC0050D906 /* PersonRaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59622BB07BAC0050D906 /* PersonRaw.swift */; };
-		63FE59652BB0ED390050D906 /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59642BB0ED380050D906 /* NewContactView.swift */; };
+		63FE59652BB0ED390050D906 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59642BB0ED380050D906 /* ContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		63FE595E2BB077F50050D906 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		63FE59602BB079730050D906 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		63FE59622BB07BAC0050D906 /* PersonRaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRaw.swift; sourceTree = "<group>"; };
-		63FE59642BB0ED380050D906 /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
+		63FE59642BB0ED380050D906 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				63FE59332BB077DF0050D906 /* TestRestAPIApp.swift */,
 				63FE59352BB077DF0050D906 /* ContentView.swift */,
 				63FE59622BB07BAC0050D906 /* PersonRaw.swift */,
-				63FE59642BB0ED380050D906 /* NewContactView.swift */,
+				63FE59642BB0ED380050D906 /* ContactView.swift */,
 				63FE59602BB079730050D906 /* ViewModel.swift */,
 				63FE595E2BB077F50050D906 /* Model.swift */,
 				63FE59372BB077E00050D906 /* Assets.xcassets */,
@@ -273,7 +273,7 @@
 			files = (
 				63FE595F2BB077F50050D906 /* Model.swift in Sources */,
 				63FE59362BB077DF0050D906 /* ContentView.swift in Sources */,
-				63FE59652BB0ED390050D906 /* NewContactView.swift in Sources */,
+				63FE59652BB0ED390050D906 /* ContactView.swift in Sources */,
 				63FE59632BB07BAC0050D906 /* PersonRaw.swift in Sources */,
 				63FE59612BB079730050D906 /* ViewModel.swift in Sources */,
 				63FE59342BB077DF0050D906 /* TestRestAPIApp.swift in Sources */,
