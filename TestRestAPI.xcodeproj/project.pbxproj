@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63251F562BB47F9600E2791C /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63251F552BB47F9600E2791C /* PhotoPicker.swift */; };
+		634B66362BC80C0C00F008EC /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 634B66352BC80C0C00F008EC /* index.js */; };
+		634B66382BC80C1500F008EC /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 634B66372BC80C1500F008EC /* package-lock.json */; };
+		634B663A2BC80C1A00F008EC /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 634B66392BC80C1A00F008EC /* package.json */; };
 		63FE59342BB077DF0050D906 /* TestRestAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59332BB077DF0050D906 /* TestRestAPIApp.swift */; };
 		63FE59362BB077DF0050D906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FE59352BB077DF0050D906 /* ContentView.swift */; };
 		63FE59382BB077E00050D906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FE59372BB077E00050D906 /* Assets.xcassets */; };
@@ -39,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63251F552BB47F9600E2791C /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		634B66352BC80C0C00F008EC /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		634B66372BC80C1500F008EC /* package-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
+		634B66392BC80C1A00F008EC /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		63FE59302BB077DF0050D906 /* TestRestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FE59332BB077DF0050D906 /* TestRestAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRestAPIApp.swift; sourceTree = "<group>"; };
 		63FE59352BB077DF0050D906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,10 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		634B663B2BC80C2300F008EC /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				634B66392BC80C1A00F008EC /* package.json */,
+				634B66352BC80C0C00F008EC /* index.js */,
+				634B66372BC80C1500F008EC /* package-lock.json */,
+			);
+			path = RestAPI;
+			sourceTree = "<group>";
+		};
 		63FE59272BB077DF0050D906 = {
 			isa = PBXGroup;
 			children = (
-				63251F552BB47F9600E2791C /* PhotoPicker.swift */,
 				63FE59322BB077DF0050D906 /* TestRestAPI */,
 				63FE59442BB077E00050D906 /* TestRestAPITests */,
 				63FE594E2BB077E00050D906 /* TestRestAPIUITests */,
@@ -110,6 +123,7 @@
 				63FE59352BB077DF0050D906 /* ContentView.swift */,
 				63FE59622BB07BAC0050D906 /* PersonRaw.swift */,
 				63FE59642BB0ED380050D906 /* ContactView.swift */,
+				634B663B2BC80C2300F008EC /* RestAPI */,
 				63FE59602BB079730050D906 /* ViewModel.swift */,
 				63FE595E2BB077F50050D906 /* Model.swift */,
 				63FE59372BB077E00050D906 /* Assets.xcassets */,
@@ -248,8 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634B66362BC80C0C00F008EC /* index.js in Resources */,
 				63FE593C2BB077E00050D906 /* Preview Assets.xcassets in Resources */,
 				63FE59382BB077E00050D906 /* Assets.xcassets in Resources */,
+				634B66382BC80C1500F008EC /* package-lock.json in Resources */,
+				634B663A2BC80C1A00F008EC /* package.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63251F562BB47F9600E2791C /* PhotoPicker.swift in Sources */,
 				63FE595F2BB077F50050D906 /* Model.swift in Sources */,
 				63FE59362BB077DF0050D906 /* ContentView.swift in Sources */,
 				63FE59652BB0ED390050D906 /* ContactView.swift in Sources */,

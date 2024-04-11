@@ -9,7 +9,7 @@ import PhotosUI
 import SwiftUI
 
 struct PhotoPicker: View {
-    @State private var pickerItem: PhotosPickerItem?
+    @State private var pickerItem: PhotosPickerItem? = PhotosPickerItem(itemIdentifier: "String1")
     @State private var selectedImage: Image?
     
     var body: some View {
@@ -17,7 +17,7 @@ struct PhotoPicker: View {
             selectedImage?
                 .resizable()
                 .scaledToFit()
-            PhotosPicker("Select a picture", selection: $pickerItem, matching: .images)
+            PhotosPicker("Select a photo", selection: $pickerItem, matching: .images)
         }
         .onChange(of: pickerItem) {
             Task {

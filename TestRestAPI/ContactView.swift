@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ContactView: View {
     var person: Person?
@@ -14,15 +15,6 @@ struct ContactView: View {
     @State private var name: String = ""
     @State private var last_name: String = ""
     @State private var email: String = ""
-    
-    init(person: Person?, saveHandler: @escaping (_ person: Person) async throws -> Void) {
-        self.saveHandler = saveHandler
-        self.person = person
-        
-        _name = State(initialValue: person?.first_name ?? "")
-        _last_name = State(initialValue: person?.last_name ?? "")
-        _email = State(initialValue: person?.email ?? "")
-    }
     
     var title: String {
         if let _ = person {
@@ -38,7 +30,7 @@ struct ContactView: View {
         NavigationStack {
             VStack {
                 image
-                
+                PhotoPicker()
                 list
             }
             .background(Color(.systemGroupedBackground))
@@ -108,7 +100,45 @@ struct ContactView: View {
             TextField("Last Name", text: $last_name)
             TextField("Email", text: $email)
         }
-        .listStyle(.grouped)
+        .listStyle(.plain)
+    }
+    
+    init(person: Person?, saveHandler: @escaping (_ person: Person) async throws -> Void) {
+        self.saveHandler = saveHandler
+        self.person = person
+        
+        _name = State(initialValue: person?.first_name ?? "")
+        _last_name = State(initialValue: person?.last_name ?? "")
+        _email = State(initialValue: person?.email ?? "")
+    }
+}
+
+struct PhotoPicker: View {
+    @State private var pickerItem: PhotosPickerItem? = PhotosPickerItem(itemIdentifier: "String1")
+    @State private var selectedImage: Image?
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 25.0)
+                .fill(.gray.opacity(0.1))
+                .frame(width: 150, height: 40)
+            photoPicker
+        }
+        .scaleEffect(CGSize(width: 0.7, height: 0.7))
+    }
+    
+    var photoPicker: some View {
+        VStack {
+            //selectedImage?
+                //.resizable()
+                //.scaledToFit()
+            PhotosPicker("Select a photo", selection: $pickerItem, matching: .images)
+        }
+        .onChange(of: pickerItem) {
+            Task {
+                selectedImage = try await pickerItem?.loadTransferable(type: Image.self)
+            }
+        }
     }
 }
 
